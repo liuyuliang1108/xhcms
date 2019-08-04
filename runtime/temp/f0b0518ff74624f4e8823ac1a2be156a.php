@@ -1,0 +1,2 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpStudy\WWW\xhcms\plugins/viewbigpic/view/viewbigpic.html";i:1556813249;}*/ ?>
+<?php switch($type): case "1": ?>onmousemove='showBigPic(\""+value+"\")' onmouseout='closeimg()'<?php break; case "2": ?>onmousemove="showBigPic(this.value)" onmouseout="closeimg()"<?php break; endswitch; ?>

@@ -1,0 +1,91 @@
+{extend name='common/_container'} 
+{block name="content"}
+<div style="background-color:#FFF; padding-top:10px; margin-top:-15px;" class="container-fluid" style="padding: 0 !important;">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="alert alert-success alert-dismissable">
+				<button aria-hidden="true" data-dismiss="alert" class="close"
+					type="button">×</button>
+				{:session('admin.username')}，欢迎使用{:config('site_title')}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<table class="table table-bordered" "> 
+				<tbody>
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left">系统信息</td> 
+						<td></td>
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">网站域名：</td> 
+						<td>http://{$_SERVER.SERVER_NAME}</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">服务IP：</td> 
+						<td>{$_SERVER.SERVER_ADDR}:{$_SERVER.SERVER_PORT}</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">php版本：</td> 
+						<td>{:phpversion()}</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">物理路径：</td> 
+						<td>{:dirname(THINK_PATH)}</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">运行环境：</td> 
+						<td>{$_SERVER.SERVER_SOFTWARE}</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">上传大小：</td> 
+						<td>  <?php echo get_cfg_var( "upload_max_filesize")?get_cfg_var( "upload_max_filesize"): "不允许上传文件" ; ?></td>   
+					</tr> 
+				</tbody> 
+			</table> 
+		</div>
+		<div class="col-lg-6">
+			<table class="table table-bordered" "> 
+				<tbody>
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left">程序信息</td> 
+						<td></td>
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">程序版本：</td> 
+						<td>1.0.0</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">程序支持：</td> 
+						<td><a target="_blank" href="http://www.xhadmin.com">xhadmin</a></td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">开发团队：</td> 
+						<td>寒塘冷月</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">联系QQ：</td> 
+						<td>27463574</td>   
+					</tr>
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">商业授权费用：</td> 
+						<td> 
+							<span class="label label-warning">&yen;198</span>
+						</td>   
+					</tr> 
+					<tr> 
+						<td style="background-color:#F5F5F6; font-weight:bold; text-align:left" width="30%">获取授权：</td> 
+						<td> 
+							<a class="btn btn-success btn-outline" href="http://wpa.qq.com/msgrd?v=3&uin=274363574&site=qq&menu=yes" target="_blank">
+							<i class="fa fa-qq"> </i> 联系作者
+							</a>
+						</td>   
+					</tr> 
+					
+				</tbody> 
+			</table> 
+		</div>
+	</div>
+	</div>
+{/block}
